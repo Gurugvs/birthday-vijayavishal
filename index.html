@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fira+Code:wght@400;600&family=Outfit:wght@300;400;600;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================================
+       PHASE 1: THE 404 ERROR PRANK SCREEN
+       ======================================================== -->
+  <div id="prank-screen" class="prank-container">
+    <div class="prank-content">
+      <div class="glitch-wrapper">
+        <h1 class="error-code" data-text="404">404</h1>
+      </div>
+      <h2 class="error-title">Page Not Found</h2>
+      <p class="error-desc">
+        The requested URL <span class="highlight-url">/vijayavishal</span> was not found on this server.
+        That’s all we know.
+      </p>
+
+      <div class="error-terminal">
+        <p><span class="term-dim">> Status:</span> 404_PAGE_MISSING</p>
+        <p><span class="term-dim">> Error Code:</span> ERR_BIRTHDAY_CELEBRATION_UNRESOLVED</p>
+        <p><span class="term-dim">> Diagnostic:</span> VIP Entity detected in cache. Manual override required.</p>
+      </div>
+
+      <div class="prank-actions">
+        <button id="fix-error-btn" class="btn-fix">
+          <span class="btn-icon">⚡</span> Tap to Fix Error & Reconnect
+        </button>
+      </div>
+      <p class="hint-text">⚠️ Warning: Clicking will initiate Emergency Recovery Protocol</p>
+    </div>
+
+    <!-- Glitch Overlay effect -->
+    <div id="glitch-overlay" class="glitch-overlay">
+      <div class="glitch-scanlines"></div>
+      <div class="glitch-message">
+        <div class="override-text">🚨 SYSTEM OVERRIDE 🚨</div>
+        <div class="override-sub">CALIBRATING PARTY PROTOCOL...</div>
+        <div class="override-countdown" id="override-count">3</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       PHASE 2-7: THE GRAND BIRTHDAY CELEBRATION
+       ======================================================== -->
+  <div id="celebration-screen" class="celebration-container hidden">
+    
+    <!-- Canvas for Fireworks & Confetti -->
+    <canvas id="fx-canvas"></canvas>
+
+    <!-- Floating Audio Control & Controls Bar -->
+    <header class="top-nav">
+      <div class="nav-logo">
+        <span class="sparkle-icon">✨</span>
+        <span class="logo-text">VIP Birthday Bash</span>
+      </div>
+      <div class="nav-controls">
+        <button id="music-toggle-btn" class="nav-btn music-btn" title="Toggle Celebration Music">
+          <span class="music-icon">🎵</span>
+          <span id="music-status-text">Music: ON</span>
+        </button>
+        <button id="confetti-burst-btn" class="nav-btn confetti-btn" title="Launch Confetti Blast!">
+          🎉 Launch Blast!
+        </button>
+      </div>
+    </header>
+
+    <main class="content-wrapper">
+      
+      <!-- HERO SECTION -->
+      <section class="hero-section">
+        <div class="badge-pill">🎂 Officially Celebrating Another Year Of Awesomeness</div>
+        <h1 class="hero-title">
+          HAPPY BIRTHDAY, <br>
+          <span class="name-gradient">VIJAYAVISHAL!</span>
+        </h1>
+        <p class="hero-tagline">
+          Today is all about you! Wishing you infinite joy, unstoppable success, crazy adventures, and legendary memories! 🚀✨
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#cake-section" class="btn-primary">🎂 Make a Wish & Blow Candles</a>
+          <a href="#memories-section" class="btn-secondary">📸 Memory Lane</a>
+        </div>
+      </section>
+
+      <!-- INTERACTIVE BIRTHDAY CAKE SECTION -->
+      <section id="cake-section" class="interactive-cake-section">
+        <div class="section-header">
+          <span class="section-tag">Interactive Moment</span>
+          <h2 class="section-title">Make a Wish! 🕯️</h2>
+          <p class="section-subtitle" id="cake-instructions">
+            Tap the candles to blow them out, make your birthday wish!
+          </p>
+        </div>
+
+        <div class="cake-container">
+          <div class="cake-wrapper">
+            <!-- Candles Row -->
+            <div class="candles-row" id="candles-group">
+              <div class="candle" data-id="1">
+                <div class="flame"></div>
+                <div class="wick"></div>
+                <div class="candle-body"></div>
+              </div>
+              <div class="candle" data-id="2">
+                <div class="flame"></div>
+                <div class="wick"></div>
+                <div class="candle-body"></div>
+              </div>
+              <div class="candle" data-id="3">
+                <div class="flame"></div>
+                <div class="wick"></div>
+                <div class="candle-body"></div>
+              </div>
+              <div class="candle" data-id="4">
+                <div class="flame"></div>
+                <div class="wick"></div>
+                <div class="candle-body"></div>
+              </div>
+              <div class="candle" data-id="5">
+                <div class="flame"></div>
+                <div class="wick"></div>
+                <div class="candle-body"></div>
+              </div>
+            </div>
+
+            <!-- Cake Tiers -->
+            <div class="cake-tier tier-top">
+              <div class="frosting-drips">
+                <span class="drip"></span><span class="drip"></span><span class="drip"></span><span class="drip"></span><span class="drip"></span>
+              </div>
+              <div class="tier-pattern">★ ★ ★ ★ ★</div>
+            </div>
+            <div class="cake-tier tier-middle">
+              <div class="frosting-drips">
+                <span class="drip"></span><span class="drip"></span><span class="drip"></span><span class="drip"></span><span class="drip"></span><span class="drip"></span>
+              </div>
+              <div class="tier-stripe"></div>
+            </div>
+            <div class="cake-tier tier-bottom">
+              <div class="frosting-drips">
+                <span class="drip"></span><span class="drip"></span><span class="drip"></span><span class="drip"></span><span class="drip"></span><span class="drip"></span><span class="drip"></span>
+              </div>
+              <div class="tier-decor"></div>
+            </div>
+            <div class="cake-plate"></div>
+          </div>
+
+          <div class="cake-controls">
+            <button id="blow-all-candles-btn" class="btn-cake">💨 Blow Out All Candles!</button>
+            <button id="relight-candles-btn" class="btn-cake btn-relight hidden">🔥 Relight Candles</button>
+          </div>
+
+          <!-- Wish Modal / Celebration Card when candles are extinguished -->
+          <div id="wish-card" class="wish-card hidden">
+            <div class="wish-card-inner">
+              <span class="wish-emoji">🎉✨</span>
+              <h3>A Wish Has Been Sent to the Universe!</h3>
+              <p>May all your dreams, ambitions, and craziest goals come true this year, Vijayavishal!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- POLAROID MEMORY LANE SECTION -->
+      <section id="memories-section" class="memories-section">
+        <div class="section-header">
+          <span class="section-tag">Cherished Moments</span>
+          <h2 class="section-title">The Memory Lane 📸</h2>
+          <p class="section-subtitle">A collection of memories, laughs, and unforgettable times.</p>
+        </div>
+
+        <!-- Photo Uploader / Customizer Bar -->
+        <div class="photo-tools">
+          <label for="custom-photo-input" class="upload-btn">
+            📷 <span>Add / Swap Your Own Photos</span>
+            <input type="file" id="custom-photo-input" accept="image/*" multiple>
+          </label>
+          <span class="photo-hint">Tip: Click any polaroid to view enlarged!</span>
+        </div>
+
+        <div class="polaroid-grid" id="polaroid-container">
+          <!-- Polaroid 1 -->
+          <div class="polaroid-card" style="--rotation: -2.5deg;">
+            <div class="tape-strip"></div>
+            <div class="polaroid-img-wrapper">
+              <img src="assets/sample1.jpg" alt="Epic Celebration" class="polaroid-img">
+            </div>
+            <div class="polaroid-caption">
+              <p class="caption-title">The Sparkler Night ✨</p>
+              <p class="caption-date">Pure gold vibes & eternal laughs</p>
+            </div>
+          </div>
+
+          <!-- Polaroid 2 -->
+          <div class="polaroid-card" style="--rotation: 2deg;">
+            <div class="tape-strip"></div>
+            <div class="polaroid-img-wrapper placeholder-gradient-1">
+              <div class="custom-card-icon">🚀</div>
+              <div class="custom-card-text">Always Aiming High</div>
+            </div>
+            <div class="polaroid-caption">
+              <p class="caption-title">Mastermind at Work 💡</p>
+              <p class="caption-date">Unmatched energy & big moves</p>
+            </div>
+          </div>
+
+          <!-- Polaroid 3 -->
+          <div class="polaroid-card" style="--rotation: -1.5deg;">
+            <div class="tape-strip"></div>
+            <div class="polaroid-img-wrapper placeholder-gradient-2">
+              <div class="custom-card-icon">🍕🍻</div>
+              <div class="custom-card-text">Late Night Adventures</div>
+            </div>
+            <div class="polaroid-caption">
+              <p class="caption-title">Squad Goals 💯</p>
+              <p class="caption-date">Never a dull moment with you</p>
+            </div>
+          </div>
+
+          <!-- Polaroid 4 -->
+          <div class="polaroid-card" style="--rotation: 3deg;">
+            <div class="tape-strip"></div>
+            <div class="polaroid-img-wrapper placeholder-gradient-3">
+              <div class="custom-card-icon">👑</div>
+              <div class="custom-card-text">The Birthday Legend</div>
+            </div>
+            <div class="polaroid-caption">
+              <p class="caption-title">Main Character Energy 🌟</p>
+              <p class="caption-date">Here's to your best chapter yet!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HEARTFELT LETTER / WISHES SECTION -->
+      <section class="letter-section">
+        <div class="section-header">
+          <span class="section-tag">Words From The Heart</span>
+          <h2 class="section-title">Special Birthday Note 💌</h2>
+        </div>
+
+        <div class="parchment-letter">
+          <div class="letter-seal">👑</div>
+          <div class="letter-body">
+            <h3>Dear Vijayavishal,</h3>
+            <p>
+              Happy Birthday! Having you as a friend is a true blessing. You bring infectious humor, steadfast support, and unstoppable energy wherever you go. 
+            </p>
+            <p>
+              Whether it’s tackling wild ideas, sharing inside jokes that no one else gets, or just chilling and talking about life, every moment is ten times better with you around.
+            </p>
+            <p>
+              May this upcoming year be packed with groundbreaking achievements, good health, boundless happiness, and plenty of reasons to celebrate! Keep shining and inspiring everyone around you.
+            </p>
+            <div class="letter-sign-off">
+              <p>Forever your biggest cheerleaders,</p>
+              <p class="signature">Your Best Friends 🥂</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BALLOON POP MINI-GAME -->
+      <section class="game-section">
+        <div class="section-header">
+          <span class="section-tag">Interactive Fun</span>
+          <h2 class="section-title">Pop The Birthday Balloons! 🎈</h2>
+          <p class="section-subtitle">Click floating balloons to pop them and reveal secret birthday perks!</p>
+          <div class="game-stats">Balloons Popped: <span id="pop-counter">0</span> / 5</div>
+        </div>
+
+        <div class="balloon-arena" id="balloon-arena">
+          <!-- Balloons will be dynamically spawned or pre-placed here -->
+        </div>
+        <div id="pop-message-box" class="pop-message-box hidden">
+          <span class="pop-msg-text" id="pop-msg-text">Awesome!</span>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="birthday-footer">
+        <div class="footer-cake">🎂</div>
+        <p>Crafted with lots of ❤️, code, and confetti for <strong>Vijayavishal</strong></p>
+        <p class="footer-sub">Cheers to 365 new days of pure greatness!</p>
+        <button id="replay-prank-btn" class="btn-replay">🔄 Replay 404 Prank Intro</button>
+      </footer>
+
+    </main>
+
+    <!-- Photo Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal hidden">
+      <span class="lightbox-close">&times;</span>
+      <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="Enlarged Memory">
+        <p id="lightbox-caption"></p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
